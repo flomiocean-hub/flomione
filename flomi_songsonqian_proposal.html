@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flomi × 鬆鬆潛｜海洋半日體驗合作企畫案</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Noto+Serif+TC:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ocean-deep:    #0A2030;
+    --ocean-mid:     #0F4060;
+    --ocean-light:   #1A6080;
+    --ocean-foam:    #5BA8C0;
+    --ocean-pale:    #A8D4E0;
+    --sand:          #E8DCC8;
+    --sand-light:    #F5EFE4;
+    --sun:           #D4A855;
+    --sun-light:     #E8C880;
+    --white:         #FDFBF8;
+    --text-dark:     #0D1E26;
+    --text-mid:      #2A4A5A;
+    --text-muted:    #5A7A8A;
+  }
+
+  body {
+    background: var(--white);
+    color: var(--text-dark);
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 300;
+    line-height: 1.9;
+    overflow-x: hidden;
+  }
+
+  /* ─── COVER ─── */
+  .cover {
+    position: relative;
+    min-height: 100vh;
+    background: var(--ocean-deep);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+  }
+
+  .ocean-waves {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .cover-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 80px 80px;
+    color: var(--white);
+  }
+
+  .cover-eyebrow {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--ocean-foam);
+    margin-bottom: 32px;
+  }
+
+  .cover-title-zh {
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 300;
+    font-size: 56px;
+    line-height: 1.2;
+    letter-spacing: 0.08em;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+
+  .cover-title-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 26px;
+    color: var(--ocean-pale);
+    letter-spacing: 0.04em;
+    margin-bottom: 48px;
+  }
+
+  .cover-meta {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    border-top: 0.5px solid rgba(168, 212, 224, 0.3);
+    padding-top: 32px;
+  }
+
+  .cover-brand {
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--sun-light);
+    letter-spacing: 0.08em;
+  }
+
+  .cover-brand-sub {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 11px;
+    color: var(--ocean-pale);
+    letter-spacing: 0.1em;
+    margin-top: 2px;
+  }
+
+  .cover-divider {
+    width: 1px;
+    height: 40px;
+    background: rgba(168, 212, 224, 0.3);
+  }
+
+  .cover-date {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    color: var(--ocean-pale);
+    letter-spacing: 0.15em;
+  }
+
+  /* ─── SECTION ─── */
+  .section {
+    padding: 96px 80px;
+    position: relative;
+  }
+
+  .section--sand {
+    background: var(--sand-light);
+  }
+
+  .section--dark {
+    background: var(--ocean-deep);
+    color: var(--white);
+  }
+
+  .section--mid {
+    background: var(--ocean-mid);
+    color: var(--white);
+  }
+
+  .section-number {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    color: var(--ocean-foam);
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .section-number--light {
+    color: var(--ocean-pale);
+  }
+
+  .section-number--sand {
+    color: var(--sun);
+  }
+
+  .section-title-zh {
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 400;
+    font-size: 36px;
+    letter-spacing: 0.12em;
+    color: var(--text-dark);
+    line-height: 1.3;
+  }
+
+  .section-title-zh--white {
+    color: var(--white);
+  }
+
+  .section-title-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 16px;
+    color: var(--text-muted);
+    letter-spacing: 0.06em;
+    margin-top: 4px;
+  }
+
+  .section-title-en--light {
+    color: var(--ocean-pale);
+  }
+
+  .title-group { margin-bottom: 56px; }
+
+  /* ─── PROSE ─── */
+  .prose {
+    font-size: 16px;
+    line-height: 2;
+    color: var(--text-mid);
+    max-width: 680px;
+  }
+
+  .prose--white {
+    color: var(--ocean-pale);
+  }
+
+  .prose p + p {
+    margin-top: 20px;
+  }
+
+  .lead {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.7;
+    color: var(--ocean-mid);
+    max-width: 720px;
+    margin-bottom: 40px;
+  }
+
+  /* ─── OBJECTIVE CARDS ─── */
+  .obj-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-top: 48px;
+  }
+
+  .obj-card {
+    background: var(--white);
+    padding: 48px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .obj-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 80px;
+    font-weight: 300;
+    color: var(--ocean-pale);
+    line-height: 1;
+    margin-bottom: 16px;
+    opacity: 0.5;
+  }
+
+  .obj-title {
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 500;
+    font-size: 17px;
+    letter-spacing: 0.08em;
+    color: var(--ocean-deep);
+    margin-bottom: 12px;
+  }
+
+  .obj-desc {
+    font-size: 14px;
+    line-height: 1.9;
+    color: var(--text-muted);
+  }
+
+  .obj-bar {
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--ocean-foam);
+  }
+
+  /* ─── ROLE SPLIT ─── */
+  .role-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin-top: 56px;
+  }
+
+  .role-col {
+    padding: 56px 48px;
+  }
+
+  .role-col--left {
+    background: rgba(255,255,255,0.06);
+    border-right: 0.5px solid rgba(168, 212, 224, 0.2);
+  }
+
+  .role-col--right {
+    background: rgba(255,255,255,0.03);
+  }
+
+  .role-brand {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--sun-light);
+    margin-bottom: 8px;
+  }
+
+  .role-brand-name {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 36px;
+    letter-spacing: 0.05em;
+  }
+
+  .role-group-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--ocean-foam);
+    margin-bottom: 12px;
+    margin-top: 28px;
+    text-transform: uppercase;
+  }
+
+  .role-items {
+    list-style: none;
+  }
+
+  .role-items li {
+    font-size: 14px;
+    color: var(--ocean-pale);
+    padding: 7px 0;
+    border-bottom: 0.5px solid rgba(168, 212, 224, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .role-items li::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--ocean-foam);
+    flex-shrink: 0;
+  }
+
+  /* ─── SCHEDULE ─── */
+  .schedule {
+    margin-top: 56px;
+  }
+
+  .schedule-row {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 0;
+    position: relative;
+  }
+
+  .schedule-row + .schedule-row { margin-top: 0; }
+
+  .schedule-time {
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    color: var(--sun);
+    padding: 20px 0;
+    border-right: 1px solid rgba(168, 212, 224, 0.15);
+    padding-right: 24px;
+    text-align: right;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+  }
+
+  .schedule-dot {
+    position: absolute;
+    left: 100px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--ocean-foam);
+    border: 2px solid var(--ocean-mid);
+  }
+
+  .schedule-content {
+    padding: 18px 0 18px 32px;
+    font-size: 15px;
+    color: var(--ocean-pale);
+    border-bottom: 0.5px solid rgba(168, 212, 224, 0.08);
+  }
+
+  /* ─── EQUIPMENT GRID ─── */
+  .equip-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--ocean-pale);
+    margin-top: 56px;
+  }
+
+  .equip-cell {
+    background: var(--sand-light);
+    padding: 36px 32px;
+  }
+
+  .equip-cat {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    color: var(--sun);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .equip-title {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--ocean-deep);
+    margin-bottom: 20px;
+    letter-spacing: 0.05em;
+  }
+
+  .equip-list {
+    list-style: none;
+  }
+
+  .equip-list li {
+    font-size: 14px;
+    color: var(--text-muted);
+    padding: 6px 0;
+    border-bottom: 0.5px solid rgba(15, 64, 96, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .equip-list li::before {
+    content: '—';
+    color: var(--ocean-foam);
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+  }
+
+  /* ─── PRICING ─── */
+  .pricing-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 56px;
+  }
+
+  .price-card {
+    border: 0.5px solid rgba(168, 212, 224, 0.3);
+    padding: 40px;
+    position: relative;
+  }
+
+  .price-card--featured {
+    background: rgba(91, 168, 192, 0.08);
+    border-color: var(--ocean-foam);
+  }
+
+  .price-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    color: var(--ocean-foam);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .price-title {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 8px;
+    letter-spacing: 0.05em;
+  }
+
+  .price-amount {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 52px;
+    font-weight: 300;
+    color: var(--sun-light);
+    line-height: 1;
+    margin: 16px 0;
+  }
+
+  .price-amount span {
+    font-size: 18px;
+    color: var(--ocean-pale);
+    vertical-align: super;
+  }
+
+  .price-note {
+    font-size: 13px;
+    color: var(--ocean-pale);
+    opacity: 0.7;
+    margin-bottom: 24px;
+  }
+
+  .price-includes {
+    list-style: none;
+    margin-top: 24px;
+    border-top: 0.5px solid rgba(168, 212, 224, 0.15);
+    padding-top: 24px;
+  }
+
+  .price-includes li {
+    font-size: 13px;
+    color: var(--ocean-pale);
+    padding: 6px 0;
+    display: flex;
+    gap: 10px;
+  }
+
+  .price-includes li::before {
+    content: '✦';
+    color: var(--ocean-foam);
+    font-size: 10px;
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
+
+  .addon-table {
+    margin-top: 48px;
+    border: 0.5px solid rgba(168, 212, 224, 0.2);
+    overflow: hidden;
+  }
+
+  .addon-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding: 20px 32px;
+    border-bottom: 0.5px solid rgba(168, 212, 224, 0.1);
+    gap: 24px;
+    align-items: center;
+  }
+
+  .addon-row:last-child { border-bottom: none; }
+
+  .addon-row-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    color: var(--ocean-foam);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .addon-name {
+    font-size: 15px;
+    color: var(--white);
+    letter-spacing: 0.03em;
+  }
+
+  .addon-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 300;
+    color: var(--sun-light);
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  /* ─── SAFETY ─── */
+  .safety-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    margin-top: 56px;
+  }
+
+  .safety-col-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: var(--sun);
+    margin-bottom: 24px;
+    text-transform: uppercase;
+  }
+
+  .safety-list {
+    list-style: none;
+  }
+
+  .safety-list li {
+    font-size: 15px;
+    color: var(--text-mid);
+    padding: 10px 0;
+    border-bottom: 0.5px solid rgba(15, 64, 96, 0.1);
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+
+  .safety-list li::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--ocean-foam);
+    flex-shrink: 0;
+    margin-top: 8px;
+  }
+
+  /* ─── HASHTAGS ─── */
+  .hashtag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 40px;
+  }
+
+  .hashtag {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: var(--ocean-foam);
+    border: 0.5px solid rgba(91, 168, 192, 0.4);
+    padding: 8px 16px;
+    cursor: default;
+  }
+
+  /* ─── FUTURE ─── */
+  .future-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 56px;
+  }
+
+  .future-item {
+    padding: 32px 28px;
+    border: 0.5px solid rgba(168, 212, 224, 0.15);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .future-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--ocean-foam), transparent);
+  }
+
+  .future-text {
+    font-size: 15px;
+    color: var(--ocean-pale);
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+  }
+
+  /* ─── CLOSING ─── */
+  .closing {
+    padding: 120px 80px;
+    background: var(--ocean-deep);
+    color: var(--white);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .closing-wave {
+    position: absolute;
+    inset: 0;
+    opacity: 0.06;
+    z-index: 0;
+  }
+
+  .closing-content { position: relative; z-index: 1; }
+
+  .closing-motto {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 42px;
+    font-weight: 300;
+    color: var(--white);
+    line-height: 1.4;
+    max-width: 700px;
+    margin: 0 auto 16px;
+  }
+
+  .closing-sub {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--ocean-pale);
+    letter-spacing: 0.2em;
+    margin-bottom: 64px;
+  }
+
+  .closing-contact {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    border: 0.5px solid rgba(168, 212, 224, 0.3);
+    padding: 40px 60px;
+  }
+
+  .closing-brand-name {
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    color: var(--sun-light);
+    margin-bottom: 4px;
+  }
+
+  .closing-ig {
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    color: var(--ocean-foam);
+    letter-spacing: 0.1em;
+  }
+
+  .closing-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 16px;
+  }
+
+  .closing-tag {
+    font-size: 12px;
+    color: var(--ocean-pale);
+    opacity: 0.7;
+    letter-spacing: 0.06em;
+  }
+
+  .closing-version {
+    position: absolute;
+    bottom: 32px;
+    right: 80px;
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: rgba(168, 212, 224, 0.3);
+    letter-spacing: 0.2em;
+  }
+
+  /* ─── DIVIDER ─── */
+  .wave-divider {
+    width: 100%;
+    height: 48px;
+    display: block;
+  }
+
+  /* ─── PAGE BREAK HINT ─── */
+  @media print {
+    .section { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════ COVER ═══════════════════════════════ -->
+<section class="cover">
+
+  <!-- Animated Ocean SVG -->
+  <svg class="ocean-waves" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <radialGradient id="gDeep" cx="30%" cy="80%" r="70%">
+        <stop offset="0%" stop-color="#1A6080" stop-opacity="0.5"/>
+        <stop offset="100%" stop-color="#0A2030" stop-opacity="0"/>
+      </radialGradient>
+      <radialGradient id="gMoon" cx="70%" cy="20%" r="40%">
+        <stop offset="0%" stop-color="#A8D4E0" stop-opacity="0.15"/>
+        <stop offset="100%" stop-color="#0A2030" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+
+    <!-- Base ocean -->
+    <rect width="1440" height="900" fill="#0A2030"/>
+    <rect width="1440" height="900" fill="url(#gDeep)"/>
+    <rect width="1440" height="900" fill="url(#gMoon)"/>
+
+    <!-- Stars -->
+    <circle cx="120" cy="80" r="1.2" fill="#A8D4E0" opacity="0.6"/>
+    <circle cx="340" cy="55" r="0.8" fill="#A8D4E0" opacity="0.4"/>
+    <circle cx="560" cy="90" r="1" fill="#A8D4E0" opacity="0.5"/>
+    <circle cx="780" cy="40" r="1.4" fill="#E8C880" opacity="0.5"/>
+    <circle cx="920" cy="70" r="0.9" fill="#A8D4E0" opacity="0.4"/>
+    <circle cx="1100" cy="50" r="1.1" fill="#A8D4E0" opacity="0.6"/>
+    <circle cx="1300" cy="85" r="0.7" fill="#A8D4E0" opacity="0.3"/>
+    <circle cx="200" cy="130" r="0.6" fill="#A8D4E0" opacity="0.3"/>
+    <circle cx="450" cy="110" r="0.9" fill="#A8D4E0" opacity="0.5"/>
+    <circle cx="650" cy="140" r="0.7" fill="#E8C880" opacity="0.4"/>
+    <circle cx="850" cy="120" r="1" fill="#A8D4E0" opacity="0.4"/>
+    <circle cx="1050" cy="100" r="0.8" fill="#A8D4E0" opacity="0.5"/>
+    <circle cx="1250" cy="130" r="1.2" fill="#A8D4E0" opacity="0.3"/>
+
+    <!-- Moon reflection line -->
+    <ellipse cx="720" cy="500" rx="30" ry="280" fill="#E8DCC8" opacity="0.04" transform="rotate(-5 720 500)"/>
+
+    <!-- Deep wave layers -->
+    <path d="M0 600 Q180 570 360 590 Q540 610 720 585 Q900 560 1080 578 Q1260 596 1440 575 L1440 900 L0 900Z" fill="#0F4060" opacity="0.7"/>
+    <path d="M0 650 Q200 620 400 640 Q600 660 800 635 Q1000 610 1200 628 Q1350 642 1440 625 L1440 900 L0 900Z" fill="#0A2030" opacity="0.9"/>
+
+    <!-- Surface waves (foreground) -->
+    <path d="M-100 730 Q100 710 300 725 Q500 740 700 718 Q900 696 1100 712 Q1300 728 1540 710 L1540 900 L-100 900Z" fill="#082838" opacity="1"/>
+
+    <!-- Foam lines -->
+    <path d="M0 645 Q150 635 300 642 Q450 649 600 638 Q750 627 900 634 Q1050 641 1200 633 Q1350 625 1440 630" fill="none" stroke="#5BA8C0" stroke-width="0.5" opacity="0.2"/>
+    <path d="M0 695 Q200 682 400 690 Q600 698 800 684 Q1000 670 1200 678 Q1350 686 1440 680" fill="none" stroke="#A8D4E0" stroke-width="0.4" opacity="0.15"/>
+
+    <!-- Horizontal light shimmer -->
+    <rect x="0" y="730" width="1440" height="1" fill="#A8D4E0" opacity="0.06"/>
+    <rect x="0" y="750" width="1440" height="0.5" fill="#A8D4E0" opacity="0.04"/>
+
+    <!-- SUP silhouette far -->
+    <ellipse cx="900" cy="716" rx="55" ry="5" fill="#0A2030" opacity="0.6"/>
+    <line x1="900" y1="710" x2="900" y2="668" stroke="#0F4060" stroke-width="1.5" opacity="0.5"/>
+    <path d="M878 668 L900 660 L922 668Z" fill="#0F4060" opacity="0.4"/>
+    <!-- person on board -->
+    <circle cx="900" cy="698" r="4" fill="#1A6080" opacity="0.5"/>
+    <rect x="897" y="702" width="6" height="12" rx="1" fill="#1A6080" opacity="0.4"/>
+  </svg>
+
+  <div class="cover-content">
+    <div class="cover-eyebrow">Ocean Half-Day Experience · Collaboration Proposal · 2026</div>
+    <div class="cover-title-zh">Flomi × 鬆鬆潛</div>
+    <div class="cover-title-zh" style="font-size:32px; color: #A8D4E0; margin-top:4px;">海洋半日體驗合作企畫案</div>
+    <div class="cover-title-en">Ocean Half-Day Experience Collaboration Proposal</div>
+
+    <div class="cover-meta">
+      <div>
+        <div class="cover-brand">FLOMI</div>
+        <div class="cover-brand-sub">浮米海洋戶外工作室</div>
+      </div>
+      <div class="cover-divider"></div>
+      <div>
+        <div class="cover-brand">鬆鬆潛</div>
+        <div class="cover-brand-sub">潛水活動 · 教學</div>
+      </div>
+      <div class="cover-divider"></div>
+      <div class="cover-date">JULY 2026 DRAFT</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ 01 BACKGROUND ═══════════════════════ -->
+<section class="section section--sand">
+  <div class="title-group">
+    <span class="section-number section-number--sand">01 — BACKGROUND</span>
+    <div class="section-title-zh">合作背景</div>
+    <div class="section-title-en">Why we're here together</div>
+  </div>
+
+  <div class="lead">
+    海洋休閒，從單一體驗走向複合式海洋生活風格。<br>
+    <em>Ocean leisure is evolving — from a single activity to a full lifestyle encounter.</em>
+  </div>
+
+  <div class="prose">
+    <p>近年旅客對海洋體驗的期待已悄然改變。他們不再只是追求純粹的 SUP 或潛水活動，而更在意整體氛圍、影像紀錄與放鬆感受。安全感、生活風格、以及留下回憶的媒介，才是這個世代旅客真正渴望的。</p>
+    <p>本次由 Flomi 浮米海洋戶外工作室與鬆鬆潛攜手合作，整合雙方核心專業，打造一套兼具 SUP 海上巡航、浮潛潛水、空拍影像紀錄、輕食補給與海域安全支援的完整半日海洋體驗。</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════ 02 OBJECTIVES ═══════════════════════ -->
+<section class="section" style="background: var(--white);">
+  <div class="title-group">
+    <span class="section-number">02 — OBJECTIVES</span>
+    <div class="section-title-zh">合作目標</div>
+    <div class="section-title-en">What we set out to achieve</div>
+  </div>
+
+  <div class="obj-grid">
+    <div class="obj-card">
+      <div class="obj-bar"></div>
+      <div class="obj-num">01</div>
+      <div class="obj-title">建立高品質海洋體驗活動</div>
+      <div class="obj-desc">透過 SUP 與潛水整合，提升活動完整性，創造市場差異化優勢，讓參與者留下難忘的海洋記憶。</div>
+    </div>
+    <div class="obj-card">
+      <div class="obj-bar" style="background: var(--sun);"></div>
+      <div class="obj-num">02</div>
+      <div class="obj-title">降低雙方營運負擔</div>
+      <div class="obj-desc">由鬆鬆潛主責招生與活動窗口，Flomi 專注海上設備與海域支援，分工明確、效率最大化。</div>
+    </div>
+    <div class="obj-card">
+      <div class="obj-bar" style="background: var(--ocean-mid);"></div>
+      <div class="obj-num">03</div>
+      <div class="obj-title">建立長期合作模式</div>
+      <div class="obj-desc">測試聯名海洋活動、品牌合作與企業海洋體驗的各種可能性，為未來深度合作奠定基礎。</div>
+    </div>
+    <div class="obj-card">
+      <div class="obj-bar" style="background: var(--ocean-deep);"></div>
+      <div class="obj-num">04</div>
+      <div class="obj-title">強化社群與品牌曝光</div>
+      <div class="obj-desc">透過空拍、短影音與海洋生活感內容，放大雙品牌影響力，吸引更廣泛的海洋族群。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ 03 STRUCTURE ═══════════════════════ -->
+<section class="section section--dark">
+  <div class="title-group">
+    <span class="section-number section-number--light">03 — STRUCTURE</span>
+    <div class="section-title-zh section-title-zh--white">合作模式</div>
+    <div class="section-title-en section-title-en--light">Clear roles, seamless execution</div>
+  </div>
+
+  <div class="role-split">
+    <div class="role-col role-col--left">
+      <div class="role-brand">PARTNER A</div>
+      <div class="role-brand-name">鬆鬆潛</div>
+
+      <div class="role-group-title">活動營運</div>
+      <ul class="role-items">
+        <li>活動招生與客戶服務</li>
+        <li>活動保險安排</li>
+        <li>收款與行政處理</li>
+      </ul>
+
+      <div class="role-group-title">潛水活動</div>
+      <ul class="role-items">
+        <li>潛水教學內容規劃</li>
+        <li>教練安排</li>
+        <li>潛水安全管理</li>
+      </ul>
+    </div>
+
+    <div class="role-col role-col--right">
+      <div class="role-brand">PARTNER B</div>
+      <div class="role-brand-name">Flomi 浮米</div>
+
+      <div class="role-group-title">海上設備支援</div>
+      <ul class="role-items">
+        <li>SUP 設備提供與維護</li>
+        <li>電動水推支援</li>
+        <li>海況評估與路線建議</li>
+        <li>海上協助與拖帶</li>
+      </ul>
+
+      <div class="role-group-title">體驗加值</div>
+      <ul class="role-items">
+        <li>空拍影像紀錄</li>
+        <li>海洋生活風格拍攝</li>
+        <li>基本飲食補給</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ 04 ITINERARY ═══════════════════════ -->
+<section class="section section--mid">
+  <div class="title-group">
+    <span class="section-number section-number--light">04 — ITINERARY</span>
+    <div class="section-title-zh section-title-zh--white">活動行程</div>
+    <div class="section-title-en section-title-en--light">A half day on the water — approx. 6 hours</div>
+  </div>
+
+  <div class="schedule">
+    <div class="schedule-row">
+      <div class="schedule-time">08:00</div>
+      <div class="schedule-dot"></div>
+      <div class="schedule-content">集合報到 · 裝備說明與安全須知</div>
+    </div>
+    <div class="schedule-row">
+      <div class="schedule-time">08:30</div>
+      <div class="schedule-dot"></div>
+      <div class="schedule-content">SUP 基礎教學 · 站立技巧與划槳練習</div>
+    </div>
+    <div class="schedule-row">
+      <div class="schedule-time">09:00</div>
+      <div class="schedule-dot"></div>
+      <div class="schedule-content">海上巡航體驗 · 沿岸或礁區海域探索</div>
+    </div>
+    <div class="schedule-row">
+      <div class="schedule-time">10:30</div>
+      <div class="schedule-dot"></div>
+      <div class="schedule-content">海上休息 · 空拍紀錄 · 自由拍照時間</div>
+    </div>
+    <div class="schedule-row">
+      <div class="schedule-time">11:00</div>
+      <div class="schedule-dot" style="background: var(--sun);"></div>
+      <div class="schedule-content">水果與點心補給 · 海上輕食時光</div>
+    </div>
+    <div class="schedule-row">
+      <div class="schedule-time">12:00</div>
+      <div class="schedule-dot"></div>
+      <div class="schedule-content">浮潛 · 潛水活動 · 專業教練帶領</div>
+    </div>
+    <div class="schedule-row">
+      <div class="schedule-time">14:00</div>
+      <div class="schedule-dot"></div>
+      <div class="schedule-content">空拍精華補拍 · 個人海洋風格影像</div>
+    </div>
+    <div class="schedule-row">
+      <div class="schedule-time">15:00</div>
+      <div class="schedule-dot" style="background: var(--sun);"></div>
+      <div class="schedule-content">返回岸邊 · 裝備整理 · 結束</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ 05 EQUIPMENT ═══════════════════════ -->
+<section class="section section--sand">
+  <div class="title-group">
+    <span class="section-number section-number--sand">05 — EQUIPMENT & SERVICE</span>
+    <div class="section-title-zh">設備與服務</div>
+    <div class="section-title-en">What Flomi brings to the water</div>
+  </div>
+
+  <div class="equip-grid">
+    <div class="equip-cell">
+      <div class="equip-cat">SUP GEAR</div>
+      <div class="equip-title">SUP 裝備</div>
+      <ul class="equip-list">
+        <li>SUP 板</li>
+        <li>划槳</li>
+        <li>腳繩</li>
+        <li>救生衣</li>
+      </ul>
+    </div>
+    <div class="equip-cell">
+      <div class="equip-cat">MARINE SUPPORT</div>
+      <div class="equip-title">海上支援設備</div>
+      <ul class="equip-list">
+        <li>電動水推設備</li>
+        <li>海上安全支援</li>
+        <li>拖帶協助</li>
+        <li>海況即時評估</li>
+      </ul>
+    </div>
+    <div class="equip-cell">
+      <div class="equip-cat">REFRESHMENTS</div>
+      <div class="equip-title">飲食補給</div>
+      <ul class="equip-list">
+        <li>飲用水</li>
+        <li>新鮮水果</li>
+        <li>基本點心</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="margin-top: 40px; padding: 32px 40px; border-left: 3px solid var(--ocean-foam); background: rgba(91,168,192,0.06);">
+    <div class="equip-cat" style="margin-bottom: 12px;">OPTIONAL ADD-ONS · 影像加值服務</div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+      <div>
+        <div style="font-family: 'Noto Serif TC', serif; font-size: 15px; font-weight: 500; color: var(--ocean-deep); margin-bottom: 4px;">空拍照片</div>
+        <div style="font-size: 13px; color: var(--text-muted);">活動紀錄與團體照</div>
+      </div>
+      <div>
+        <div style="font-family: 'Noto Serif TC', serif; font-size: 15px; font-weight: 500; color: var(--ocean-deep); margin-bottom: 4px;">Reel 短影音</div>
+        <div style="font-size: 13px; color: var(--text-muted);">社群精華影片剪輯</div>
+      </div>
+      <div>
+        <div style="font-family: 'Noto Serif TC', serif; font-size: 15px; font-weight: 500; color: var(--ocean-deep); margin-bottom: 4px;">個人形象海照</div>
+        <div style="font-size: 13px; color: var(--text-muted);">個人海洋風格拍攝</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ 06 PRICING ═══════════════════════ -->
+<section class="section section--dark">
+  <div class="title-group">
+    <span class="section-number section-number--light">06 — PRICING</span>
+    <div class="section-title-zh section-title-zh--white">費用與分潤</div>
+    <div class="section-title-en section-title-en--light">Fixed support fee + per-person scaling</div>
+  </div>
+
+  <div class="pricing-layout">
+    <div class="price-card price-card--featured">
+      <div class="price-label">BASE PACKAGE · 基本合作費用</div>
+      <div class="price-title">基本支援費</div>
+      <div class="price-amount"><span>NT$</span>15,000</div>
+      <div class="price-note">每梯次 · 建議人數 8 人以內</div>
+      <ul class="price-includes">
+        <li>SUP 全套設備提供</li>
+        <li>電動水推設備</li>
+        <li>飲食補給（水、水果、點心）</li>
+        <li>海上協助與安全支援</li>
+        <li>海況評估與路線建議</li>
+      </ul>
+    </div>
+
+    <div class="price-card">
+      <div class="price-label">OVERAGE · 超額人數</div>
+      <div class="price-title">超過 8 人加成</div>
+      <div class="price-amount"><span>NT$</span>600<span style="font-size:16px; vertical-align: baseline;"> / 人</span></div>
+      <div class="price-note">第 9 人起每人計算</div>
+
+      <div class="addon-table" style="margin-top: 32px; border-color: rgba(168,212,224,0.2);">
+        <div class="addon-row">
+          <div>
+            <div class="addon-row-label">ADD-ON</div>
+            <div class="addon-name">空拍照片</div>
+          </div>
+          <div class="addon-price">NT$ 3,000</div>
+        </div>
+        <div class="addon-row">
+          <div>
+            <div class="addon-row-label">ADD-ON</div>
+            <div class="addon-name">Reel 精華短影音</div>
+          </div>
+          <div class="addon-price">NT$ 5,000–8,000</div>
+        </div>
+        <div class="addon-row">
+          <div>
+            <div class="addon-row-label">ADD-ON</div>
+            <div class="addon-name">個人形象海照</div>
+          </div>
+          <div class="addon-price">NT$ 500–1,000<span style="font-size:13px; color: var(--ocean-pale);"> /人</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ 07 SAFETY ═══════════════════════ -->
+<section class="section" style="background: var(--white);">
+  <div class="title-group">
+    <span class="section-number">07 — SAFETY</span>
+    <div class="section-title-zh">安全責任分工</div>
+    <div class="section-title-en">Clear accountability on the water</div>
+  </div>
+
+  <div class="safety-split">
+    <div>
+      <div class="safety-col-title">鬆鬆潛 主責</div>
+      <ul class="safety-list">
+        <li>活動主辦責任承擔</li>
+        <li>活動保險安排與管理</li>
+        <li>潛水安全規範執行</li>
+        <li>客戶安全說明與宣導</li>
+      </ul>
+    </div>
+    <div>
+      <div class="safety-col-title">Flomi 浮米 主責</div>
+      <ul class="safety-list">
+        <li>SUP 設備安全檢查</li>
+        <li>海上機動支援協助</li>
+        <li>海況即時評估建議</li>
+        <li>緊急拖帶支援能力</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ 08 SOCIAL ═══════════════════════ -->
+<section class="section section--sand">
+  <div class="title-group">
+    <span class="section-number section-number--sand">08 — BRANDING & SOCIAL</span>
+    <div class="section-title-zh">品牌與社群合作</div>
+    <div class="section-title-en">Building an ocean lifestyle narrative together</div>
+  </div>
+
+  <div class="prose" style="margin-bottom: 40px;">
+    <p>雙方共同擁有活動影像素材使用權，透過社群共同標註、短影音聯合製作，建立跨品牌曝光生態。以海洋 lifestyle 為核心，打造真實、有溫度的品牌內容。</p>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 40px;">
+    <div>
+      <div class="equip-cat" style="margin-bottom: 16px;">CONTENT DIRECTION · 主題方向</div>
+      <ul class="safety-list">
+        <li>海洋 Lifestyle 日常</li>
+        <li>夏日海上生活感</li>
+        <li>SUP × 潛水複合體驗</li>
+        <li>海上自由感與放鬆</li>
+        <li>海洋探索與發現</li>
+      </ul>
+    </div>
+    <div>
+      <div class="equip-cat" style="margin-bottom: 16px;">PLATFORMS · 合作社群</div>
+      <ul class="safety-list">
+        <li>Instagram Reels 精華影音</li>
+        <li>限動共同標註協作</li>
+        <li>空拍素材共用</li>
+        <li>活動前宣傳共推</li>
+        <li>活動後精華內容產出</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="equip-cat" style="margin-bottom: 12px;">HASHTAGS</div>
+  <div class="hashtag-cloud">
+    <span class="hashtag">#Flomi</span>
+    <span class="hashtag">#浮米海洋戶外工作室</span>
+    <span class="hashtag">#鬆鬆潛</span>
+    <span class="hashtag">#OceanLifestyle</span>
+    <span class="hashtag">#SUPTaiwan</span>
+    <span class="hashtag">#自由潛水</span>
+    <span class="hashtag">#OceanExperience</span>
+    <span class="hashtag">#海洋半日旅</span>
+  </div>
+</section>
+
+<!-- ═══════════════════════ 09 FUTURE ═══════════════════════ -->
+<section class="section section--dark">
+  <div class="title-group">
+    <span class="section-number section-number--light">09 — FUTURE</span>
+    <div class="section-title-zh section-title-zh--white">未來合作方向</div>
+    <div class="section-title-en section-title-en--light">The horizon beyond this collaboration</div>
+  </div>
+
+  <div class="future-grid">
+    <div class="future-item">
+      <div class="future-text">海洋聯名活動</div>
+    </div>
+    <div class="future-item">
+      <div class="future-text">海上企業團建</div>
+    </div>
+    <div class="future-item">
+      <div class="future-text">海島旅遊企劃</div>
+    </div>
+    <div class="future-item">
+      <div class="future-text">海上攝影服務</div>
+    </div>
+    <div class="future-item">
+      <div class="future-text">品牌包船活動</div>
+    </div>
+    <div class="future-item">
+      <div class="future-text">國際旅客體驗團</div>
+    </div>
+    <div class="future-item" style="grid-column: 1 / -1;">
+      <div class="future-text">海洋內容創作合作 · Ocean Content Creation Partnership</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ CLOSING ═══════════════════════ -->
+<section class="closing">
+  <svg class="closing-wave" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 200 Q180 160 360 180 Q540 200 720 170 Q900 140 1080 160 Q1260 180 1440 155 L1440 600 L0 600Z" fill="#1A6080"/>
+    <path d="M0 280 Q200 240 400 260 Q600 280 800 250 Q1000 220 1200 240 Q1350 255 1440 238 L1440 600 L0 600Z" fill="#0F4060"/>
+    <path d="M0 360 Q150 330 300 345 Q450 360 600 340 Q750 320 900 335 Q1050 350 1200 338 Q1350 326 1440 335 L1440 600 L0 600Z" fill="#0A2030"/>
+  </svg>
+
+  <div class="closing-content">
+    <div class="closing-motto">輕營運・高品質・強體驗</div>
+    <div class="closing-sub">Light ops · Premium quality · Rich experience</div>
+
+    <div class="closing-contact">
+      <div class="closing-brand-name">FLOMI 浮米海洋戶外工作室</div>
+      <div class="closing-ig">Instagram · @flomi.ocean</div>
+      <div class="closing-tags">
+        <span class="closing-tag">海洋活動</span>
+        <span class="closing-tag">·</span>
+        <span class="closing-tag">SUP 體驗</span>
+        <span class="closing-tag">·</span>
+        <span class="closing-tag">海上影像紀錄</span>
+        <span class="closing-tag">·</span>
+        <span class="closing-tag">海洋 Lifestyle 企劃</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="closing-version">2026 JULY COLLABORATION DRAFT</div>
+</section>
+
+</body>
+</html>
